@@ -8,7 +8,7 @@ public class UserRegistrationTest {
     @Test
     public void givenFirstName_whenProper_ShouldReturnTrue() {
         try {
-            boolean result = userRegistration.firstNameValidate.userEntries("Akshara");
+            boolean result = userRegistration.firstNameValidate.userEntries("Neha");
             Assert.assertTrue(result);
         } catch (InvalidUserInputException e) {
             System.out.println(e);
@@ -18,7 +18,7 @@ public class UserRegistrationTest {
     @Test
     public void givenFirstName_whenNotProper_ShouldReturnFalse() {
         try {
-            boolean result = userRegistration.firstNameValidate.userEntries("Ak");
+            boolean result = userRegistration.firstNameValidate.userEntries("Neh");
             Assert.assertFalse(result);
         } catch (InvalidUserInputException e) {
             System.out.println(e);
@@ -28,7 +28,7 @@ public class UserRegistrationTest {
     @Test
     public void givenLastName_whenProper_ShouldReturnTrue() {
         try {
-            boolean result = userRegistration.lastNameValidate.userEntries("Phalake");
+            boolean result = userRegistration.lastNameValidate.userEntries("Chougule");
             Assert.assertTrue(result);
         } catch (InvalidUserInputException e) {
             System.out.println(e);
@@ -38,7 +38,7 @@ public class UserRegistrationTest {
     @Test
     public void givenLastName_whenNotProper_ShouldReturnFalse() {
         try {
-            boolean result = userRegistration.lastNameValidate.userEntries("pha");
+            boolean result = userRegistration.lastNameValidate.userEntries("Cho");
             Assert.assertFalse(result);
         } catch (InvalidUserInputException e) {
             System.out.println(e);
@@ -89,7 +89,7 @@ public class UserRegistrationTest {
     @Test
     public void givenPassword_whenProper_ShouldReturnTrue() {
         try {
-            boolean result = userRegistration.passwordValidate.userEntries("Aksh@8520");
+            boolean result = userRegistration.passwordValidate.userEntries("Neha@8520");
             Assert.assertTrue(result);
         } catch (InvalidUserInputException e) {
             System.out.println(e);
@@ -99,7 +99,7 @@ public class UserRegistrationTest {
     @Test
     public void givenPassword_whenNotProper_ShouldReturnFalse() {
         try {
-            boolean result = userRegistration.passwordValidate.userEntries("Aks231#%");
+            boolean result = userRegistration.passwordValidate.userEntries("Neh231#%");
             Assert.assertFalse(result);
         } catch (InvalidUserInputException e) {
             System.out.println(e);
